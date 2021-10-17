@@ -1,0 +1,151 @@
+/* variables */
+:root{
+    --main-color:hsl(245, 75%, 52%) ;
+    --second-color:hsl(225, 100%, 94%);
+    --color-3:hsl(225, 100%, 98%);
+    --color-4:hsl(224, 23%, 55%);
+    --color-5:hsl(223, 47%, 23%);
+}
+/* global rules */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--second-color);
+}
+/* cards */
+.countainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 451px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    background-image: url(../images/illustration-hero.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    margin: 70px 0;
+}
+.countainer .order{
+    text-align: center;
+    padding-top: 240px;
+}
+.countainer .order h1{
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--color-5);
+    padding: 15px 0 7px;
+}
+.countainer .order p{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 13px 50px 0;
+    color: var(--color-4);
+}
+.countainer .offer{
+    width: 75%;
+}
+.countainer .offer .plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: var(--color-3);
+    border-radius: 20px;
+}
+.countainer .offer .plan .image{
+    flex-grow: 1;
+    padding-left: 15px;
+}
+.countainer .offer .plan .price{
+    flex-grow: 8;
+}
+.countainer .offer .plan .price h4{
+    color: var(--color-5);
+    font-weight: 900;
+}
+.countainer .offer .plan .price p{
+    color: var(--color-4);
+}
+.countainer .offer .plan a{
+    padding-right: 15px;
+}
+.countainer .offer .control{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20%;
+    margin-top: 25px;
+}
+.countainer .offer .control input[type=submit]{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+.countainer .offer .control input[type=reset]{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--color-4);
+}
+.attribution{
+    text-align: center;
+    width: 100%;
+    bottom: -150px;
+    position: absolute
+}
+@media (max-width:375px){
+    body{
+        background-color: #d6e1ff;
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+    .countainer{
+        width: 316px;
+        height: 600px;
+        margin: 30px 0;
+    }
+    .countainer .order{
+        padding-top: 160px;
+    }
+    .countainer .order h1{
+        font-size: 21px;
+    }
+    .countainer .order p{
+        font-size: 13px;
+    }
+    .countainer .offer{
+        width: 90%;
+    }
+    .countainer .offer .plan .price{
+        flex-grow: 3;
+    }
+    .attribution{
+        font-size: 12px;
+        bottom: -25px;
+    }
+}

@@ -84,6 +84,8 @@ body{
 .container .offer .plan a{
     padding-right: 15px;
     color: var(--main-color);
+    font-weight: 700;
+    font-size: 14px;
 }
 .container .offer .control{
     display: flex;
